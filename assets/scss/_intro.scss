@@ -1,0 +1,63 @@
+.greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-family: monospace;
+    font-size: 7.75em;
+    margin-top: -60px;
+    margin-bottom: 0;
+    text-shadow: 5px -5px 0 #fff;
+
+    @include breakpoint(900px) {
+      font-size: 4.5em;
+      margin-top: -40px;
+    }
+  }
+
+  h2 {
+    font-family: monospace;
+    margin: 0;
+    font-weight: normal;
+    padding: 0;
+    font-size: 2.5em;
+
+    @include breakpoint(900px) {
+      font-size: 2em;
+    }
+  }
+}
+
+#sphynx { 
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  margin-top: 100px;
+
+  @include breakpoint(450px) {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+/* CHANGING TEXT */ 
+#changingLine {
+  position: relative;
+  left: -60px;
+}
+
+#changer {
+  font-weight: 900;
+  max-width: 200px;
+  width: 100%;
+  position: relative;
+  top: -38px;
+  left: 180px;
+
+  @include breakpoint(900px) {
+    position: relative;
+    top: -30px;
+    left: 145px;
+  }
+}

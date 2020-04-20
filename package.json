@@ -1,0 +1,33 @@
+{
+  "name": "myweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "changing-text.js",
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "css-loader": "^3.5.1",
+    "lozad": "^1.14.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:check": "eslint assets/js/*.js",
+    "lint:fix": "eslint --fix assets/js/*.js",
+    "build": "webpack --webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakubSedlacik/blabla.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JakubSedlacik/blabla/issues"
+  },
+  "homepage": "https://github.com/JakubSedlacik/blabla#readme"
+}

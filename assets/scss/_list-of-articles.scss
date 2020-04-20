@@ -1,0 +1,112 @@
+#nextContent {
+  margin: 50px 0;
+
+  @include thin-text;
+}
+
+.mainListContainer {
+  max-width: 700px;
+  width: 100%;
+  margin: auto;
+
+  @include breakpoint(425px) {
+    transform: scale(0.8);
+    width: 320px;
+    position: relative;
+    left: -30px;
+  }
+
+  :last-child {
+    border-bottom: none;
+  }
+}
+
+.list {
+  color: #000;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 50px;
+  border-bottom: 1px solid $light-grey;
+
+  &:hover {
+    #list1 {
+      background-image: url('../images/s1.jpg');
+    }
+
+    #list2 {
+      background-image: url('../images/s2.jpg');
+    }
+
+    #list3 {
+      background-image: url('../images/s3.png');
+    }
+
+     #list4 {
+      background-image: url('../images/s3.png');
+    }
+
+    #list5 {
+      background-image: url('../images/s3.png');
+    }
+
+    #list6 {
+      background-image: url('../images/s3.png');
+    }
+
+    #list7 {
+      background-image: url('../images/s3.png');
+    }
+
+    span {
+      visibility: hidden;
+    }
+  }
+}
+
+.listImg {
+  width: 71px;
+  height: 71px;
+  float: left;
+  margin: -10px 60px 0 0;
+  text-align: center;
+  line-height: 50px;
+
+  @include breakpoint(425px) {
+    margin-right: 10px;
+  }
+}
+
+.day {
+  font-size: 1.3em;
+}
+
+.month {
+  color: $darker-grey;
+  font-size: 0.8em;
+  font-weight: 100;
+  position: relative;
+  top: -25px;
+}
+
+#allArticles {
+  display: block;
+  border: 2px solid $dark-blue;
+  color: #000;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+  margin-top: 70px;
+  padding: 14px 0 10px 0;
+  width: 200px;
+
+  &:hover {
+    background-color: $dark-blue;
+    color: #E7E7E7;
+  }
+}

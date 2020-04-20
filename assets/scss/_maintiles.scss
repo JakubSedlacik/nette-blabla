@@ -1,0 +1,64 @@
+.mainTilesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    padding: 0 15px;
+    position: relative;
+    top: -15px;
+    max-width: 1180px;
+
+    @include breakpoint(900px) {
+        max-width: 710px;
+        padding: 0;
+    }
+}
+
+.tile { 
+    margin: 0 10px;
+    flex-basis: 20%;
+
+    &:hover {
+        #tileImg {
+            filter: brightness(50%);
+            transform: scale(1.4);
+        }
+    }
+
+    img {
+        max-width: 230px;
+        width: 100%;
+        transition: .6s ease;
+        margin-bottom: -8px;
+
+        @include breakpoint(900px) {
+            max-width: 320px;
+            width: 100%;   
+        }
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        overflow: hidden;
+    }
+
+    @include breakpoint(900px) {
+        flex-basis: 40%;
+    }
+
+    @include breakpoint(450px) {
+        min-width: 180px;
+        width: 100%;
+    }
+}
+
+.text {
+    position: relative;
+    top: -50%;
+    text-align: center;
+}

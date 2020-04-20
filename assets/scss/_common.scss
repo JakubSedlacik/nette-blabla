@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 100%;
+}
+
+main {
+  margin: 0 25px;
+}
+
+.iconRow {
+  display: flex;
+  justify-content: space-evenly;
+  width: 156px;
+}
+
+.displayNone {
+  display: none;
+}
