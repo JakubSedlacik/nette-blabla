@@ -19,7 +19,7 @@
     flex-basis: 20%;
 
     &:hover {
-        #tileImg {
+        .tileImg {
             filter: brightness(50%);
             transform: scale(1.4);
         }

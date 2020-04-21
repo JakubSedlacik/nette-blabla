@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs-cz">
 <head>
     <title>Náhodná stránka</title>
     <link rel="preload" href="assets/bundled/index.css" as="style">
@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="assets/bundled/index.css" type="text/css">
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Nothing to see here.">
-	
 </head>
-	{include content}
+
 <body> 
     <nav>
         <div id="navContainer">
@@ -92,12 +91,17 @@
         </div>
     </nav>
 
+    <main>
+        {include homepage}
+    </main>
+
     <footer>  
-        <p id="footerLogo">
-            <a href="#">
-                <img src="assets/images/bla.png" alt="logo">
-            </a>
-            <div class="footerText">je skoro zataženo</div>
+        <a id="footerLogo" href="#">
+            <img src="assets/images/bla.png" alt="logo">
+        </a>
+
+        <p class="footerText">
+            je skoro zataženo
         </p>
 
         <div class="footerIcons iconRow">   
@@ -164,5 +168,10 @@
             vytvořil Jakub
         </p>
     </footer>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap"
+    media="none" onload="if(media!='all')media='all'">
+
+    <script type="text/javascript" src="assets/bundled/index.js" async defer></script>
 </body>
 </html>
