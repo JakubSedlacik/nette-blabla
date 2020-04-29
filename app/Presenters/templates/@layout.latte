@@ -17,22 +17,22 @@
             </a>
 
             <ul id="navMain">
-                <li class="navMainLink"><a href="#1" id="home">domů</a>
+                <li class="navMainLink"><a href="#" id="home">domů</a>
                    <ul id="ddLink-1">
                        <li>
-                           <a href="#2" id="ddLink-111">monitor</a>
+                           <a href="#" id="ddLink-111">monitor</a>
                            <ul id="ddLink-11">
-                               <li><a href="#3">BENQ</a></li>
-                               <li><a href="#4">senseye</a></li>
+                               <li><a href="#">BENQ</a></li>
+                               <li><a href="#">senseye</a></li>
                            </ul>
                        </li>
-                       <li><a href="#5">klávesnice</a></li>
-                       <li><a href="#6">myš</a></li>
+                       <li><a href="#">klávesnice</a></li>
+                       <li><a href="#">myš</a></li>
                    </ul>
                </li>
-               <li class="navMainLink"><a href="#7">obloha</a></li>
-               <li class="navMainLink"><a href="#8">mraky</a></li>
-               <li class="navMainLink"><a href="#9">slunce</a></li>
+            {foreach $navItems as $navLink => $navItem}
+               <li class="navMainLink"><a href="{$navLink}">{$navItem}</a></li>
+            {/foreach}
             </ul>
 
             <div class="iconRow">   
@@ -72,13 +72,13 @@
 
                 <span id="dArrow-2" class="displayNone">&darr;</span>
 
-                <a href="#" id="togItem1A" class="displayNone togThin">&rsaquo; BENQ</a>
-                <a href="#" id="togItem1B" class="displayNone togThin">&rsaquo; senseye</a>
-                <a href="#" id="togItem1C" class="displayNone togThin">&raquo; klávesnice</a>
-                <a href="#" id="togItem1D" class="displayNone togThin">&raquo; myš</a>
-                <a href="#" class="navLink-2">obloha</a>
-                <a href="#" class="navLink-2">mraky</a>
-                <a href="#" class="navLink-2">slunce</a>
+            {foreach $navSubItems as $navSubItem}
+                <a href="{$navSubItem[0]}" id="{$navSubItem[1]}" class="displayNone togThin">{$navSubItem[2]|noescape}</a>
+            {/foreach}
+
+            {foreach $navItems as $dropdownLink => $navItem}
+               <a href="{$dropdownLink}">{$navItem}</a>
+            {/foreach}
             </div>
 
             <div class="secondNavIcons iconRow">   
@@ -116,46 +116,14 @@
             sledujte na instagramu
         </p>
 
+
         <div class="instaContainer"> 
-                <a href="#">
-                    <img class="instaImg lozad" data-src="assets/images/mountain.jpg" alt="hory">
+            {foreach $footerImages as $footerLink => $footerImage}
+                <a href="{$footerLink}">
+                    <img class="instaImg lozad" data-src="{$footerImage}" alt="kaktus">
                     <i class="icon-instagram instaIcon"></i>
                 </a>
-
-                <a href="#">
-                    <img class="instaImg lozad" data-src="assets/images/mountain.jpg" alt="hory">
-                    <i class="icon-instagram instaIcon"></i>
-                </a>
-
-                <a href="#">
-                    <img class="instaImg lozad" data-src="assets/images/mountain.jpg" alt="hory">
-                    <i class="icon-instagram instaIcon"></i>
-                </a>
-
-                <a href="#">
-                    <img class="instaImg lozad" data-src="assets/images/mountain.jpg" alt="hory">
-                    <i class="icon-instagram instaIcon"></i>
-                </a>
-
-                <a href="#">
-                    <img class="instaImg lozad" data-src="assets/images/mountain.jpg" alt="hory">
-                    <i class="icon-instagram instaIcon"></i>
-                </a>
-
-                <a href="#">
-                    <img class="instaImg lozad" data-src="assets/images/mountain.jpg" alt="hory">
-                    <i class="icon-instagram instaIcon"></i>
-                </a>
-
-                <a href="#">
-                    <img class="instaImg lozad" data-src="assets/images/mountain.jpg" alt="hory">
-                    <i class="icon-instagram instaIcon"></i>
-                </a>
-
-                <a href="#">
-                    <img class="instaImg lozad" data-src="assets/images/mountain.jpg" alt="hory">
-                    <i class="icon-instagram instaIcon"></i>
-                </a>        
+            {/foreach}
         </div>
 
         <svg>
@@ -165,7 +133,7 @@
         </svg>
       
         <p id="signature">
-            vytvořil Jakub
+            &copy; {$year} vytvořil Jakub
         </p>
     </footer>
 
