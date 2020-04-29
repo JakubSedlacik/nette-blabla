@@ -15,41 +15,16 @@
 </section> 
         
 <div class="mainTilesContainer">
+{foreach $mainTiles as $mainTile}
     <figure class="tile">
-        <a href="#">
-            <img class="tileImg" src="assets/images/tree.jpg" alt="strom">
+        <a href="{$mainTile[0]}">
+            <img class="tileImg" src="{$mainTile[1]}" alt="{$mainTile[2]}">
         </a>
         <figcaption class="text">
-            <a href="#">strom</a>
+            <a href="{$mainTile[0]}">{$mainTile[2]}</a>
         </figcaption>
     </figure>
-
-    <figure class="tile">
-        <a href="#">
-            <img class="tileImg" src="assets/images/dog.jpg" alt="pes">
-        </a>
-        <figcaption class="text">
-            <a href="#">pes</a>
-        </figcaption>
-    </figure>
-
-    <figure class="tile">
-        <a href="#">
-            <img class="tileImg" src="assets/images/horse.jpg" alt="kůň">
-        </a>
-        <figcaption class="text">
-            <a href="#">kůň</a>
-        </figcaption>
-    </figure>
-
-    <figure class="tile">
-        <a href="#">
-            <img class="tileImg" src="assets/images/water.jpg" alt="voda">
-        </a>
-        <figcaption class="text">
-            <a href="#">voda</a>
-        </figcaption>
-    </figure>   
+{/foreach}
 </div>
 
 <p id="nextContent">
@@ -57,68 +32,16 @@
 </p>
 
 <section class="mainListContainer">
-    <a class="list" href="#">
-        Pizzeria Tina
-        <div id="list1" class="listImg">
-            <span class="day">16</span>
+{foreach $lists as $list}
+    <a class="list" href="{$list[0]}">
+        {$list[1]}
+        <div id="{$list[2]}" class="listImg">
+            <span class="day">{$list[3]}</span>
             <br>
-            <span class="month">Bře</span>
+            <span class="month">{$list[4]}</span>
         </div>
     </a>
-
-    <a class="list" href="#">
-        Smékalovo pekařství
-        <div id="list2" class="listImg">
-            <span class="day">05</span>
-            <br>
-            <span class="month">Bře</span>
-        </div>
-    </a>
-
-    <a class="list" href="#">
-        Pekárna Borová
-        <div id="list3" class="listImg">
-            <span class="day">11</span>
-            <br>
-            <span class="month">Úno</span>
-        </div>
-    </a>
-
-    <a class="list" href="#">
-        Trafika u Jardy
-        <div id="list4" class="listImg">
-            <span class="day">24</span>
-            <br>
-            <span class="month">Led</span>
-        </div>
-    </a>
-
-    <a class="list" href="#">
-        E.N.A.P.O.
-        <div id="list5" class="listImg">
-            <span class="day">02</span>
-            <br>
-            <span class="month">Led</span>
-        </div>
-    </a>
-
-    <a class="list" href="#">
-        Lékárna
-        <div id="list6" class="listImg">
-            <span class="day">17</span>
-            <br>
-            <span class="month">Pro</span>
-        </div>
-    </a>
-
-    <a class="list" href="#">
-        Cyklo Jožák
-        <div id="list7" class="listImg">
-            <span class="day">30</span>
-            <br>
-            <span class="month">Pro</span>
-        </div>
-    </a>
+{/foreach}
 </section>
 
 <a id="allArticles" href="#">všechny články</a>

@@ -8,3 +8,4 @@ App\Bootstrap::boot()
 	->createContainer()
 	->getByType(Nette\Application\Application::class)
     ->run();
+;
